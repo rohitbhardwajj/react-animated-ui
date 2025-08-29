@@ -1,0 +1,170 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-page{
+  min-height: 100vh;
+  background-color: rgba(120, 16, 16, 0.929);
+  width: 100vw;
+ color: white;
+ position: fixed;
+ top: 0%;
+
+}
+
+
+.home-page-video-container{
+  overflow: hidden;
+  height: 100vh;
+}
+
+.home-page-video{
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+}
+.home-page-content{
+  height: 115vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.home-top-text {
+  font-family: "font1";
+ font-size: clamp(16px, 9vw, 10vw);
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 10px;
+  
+}
+
+.home-bottom-text {
+  font-family: "font1";
+font-size: clamp(16px, 6vw, 10vw);
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.home-bottom-text a{
+  border-radius: 50px;
+  border: 3px solid white;
+  text-decoration: none;
+  color: white;
+  padding: 10px 35px;
+}
+.home-bottom-text a:hover{
+  background-color: rgb(145, 145, 23);
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+.nav-bar {
+  height: 60px;             /* thoda height badha lo */
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+  overflow-x: hi;
+  display: flex;
+  align-items: center;      /* vertical center */
+  justify-content: space-between; /* h1 left, menu right */
+  padding: 0 20px;          /* andar ka gap */
+  background-color: transparent; /* optional */
+}
+
+.nav-bar h1 {
+  font-weight: bold;
+  color: white;
+  font-family: "font4";
+  font-size: clamp(18px, 3vw, 28px); /* responsive font-size */
+  margin: 0; /* default margin hata do */
+}
+
+.nav-bar .menu {
+  background-color: black;
+  width: 100px;
+  color: white;
+  text-align: center;
+  padding: 10px;  
+  border-radius: 8px; 
+  cursor: pointer;
+  
+}
+.nav-bar .menu:hover{
+  background-color: rgb(145, 145, 23)
+}
+.agents-page .nav-bar h1 {
+  color: black;
+}
+.agents-page .nav-bar{
+  position: fixed;
+  top: 0%;
+  z-index: 9999;
+}
+.agent-hero-para{
+  /* background-color: red; */
+  width: 50vw;
+  transform: translateX(95% );
+ 
+}
+
+.agent-hero-para p{
+  font-size: 4vw;
+  font-family: "font2";
+}
+.agent-hero-text{
+  font-size: 20vw;
+  font-weight: 800;
+  font-family: "font1";
+  text-align: center;
+  position: relative;
+  height: 100vh;
+  line-height: 0.9;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15vh;
+  padding-top: 260px;
+
+}
+
+.agent-fix-img-page {
+  width: 20vw;  /* sticky use karo */         /* kitna gap se sticky ho, wahi rehga */
+  position: absolute;
+  left: 30%;
+  top: 5%;
+}
+
+.agent-fix-img-page img {
+  height: 20vw;
+  border-radius: 20px;
+}
+.section1{
+  position: relative;
+}
+
+.section2{
+  height: 5000px;
+  background-color: black;
+}
+
+
+@media (max-width: 768px) {
+  .home-top-text{
+  margin-top: 150px;  /* screen ki height ke hisaab se margin-top badhega */
+}
+}
+
+  
+
+
