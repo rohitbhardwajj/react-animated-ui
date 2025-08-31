@@ -72,9 +72,8 @@ font-size: clamp(16px, 6vw, 10vw);
 .nav-bar {
   height: 60px;             /* thoda height badha lo */
   position: absolute;
-  z-index: 9999;
+  z-index: 99;
   width: 100%;
-  overflow-x: hi;
   display: flex;
   align-items: center;      /* vertical center */
   justify-content: space-between; /* h1 left, menu right */
@@ -108,7 +107,7 @@ font-size: clamp(16px, 6vw, 10vw);
   color: black;
 }
 .agents-page .nav-bar{
-  position: fixed;
+  position: sticky;
   top: 0%;
   z-index: 9999;
 }
@@ -132,7 +131,7 @@ font-size: clamp(16px, 6vw, 10vw);
 .agent-hero-para p{
   font-size: 4vw;
   font-family: "font2";
-  margin-top: 100px;
+  margin-top: 130px;
 }
 .agent-hero-text{
   font-size: 20vw;
@@ -145,7 +144,7 @@ font-size: clamp(16px, 6vw, 10vw);
   width: 100%;
   justify-content: center;
   align-items: center;
-  margin-top: 15vh;
+  margin-top: 10vh;
   padding-top: 260px;
 
 }
@@ -163,7 +162,7 @@ font-size: clamp(16px, 6vw, 10vw);
 }
 .section1{
   position: relative;
-  /* background-color: red; */
+  background-color: white;
   padding-bottom: 80px;
 }
 
@@ -229,10 +228,11 @@ font-size: clamp(16px, 6vw, 10vw);
 .transition-div{
   background-color: transparent;
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
   position: absolute;
-  z-index: 999999;
+  z-index: 999999999;
   display: flex;
+  overflow: hidden;
 }
 .stairs{
   width: 25%;
