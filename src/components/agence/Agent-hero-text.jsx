@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AgentPage2 from "./Agent-page2";
+import AgentHeroHoverPage from "./Agent-hero-hover-page";
 
 const AgentHeroText = () => {
   const section3ref = useRef(null);
@@ -35,6 +36,7 @@ const AgentHeroText = () => {
     "Our Creative_ Simmering in an environment where talent can come to a full boil. Encouraged to become the best versions of ourselves",
     "Our Culture_ We’re open to each other. Period. The team works together to create a space that makes us proud",
   ];
+  
   const imageDiv = useRef(null);
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
@@ -93,7 +95,7 @@ const AgentHeroText = () => {
           start: "top top",
           end: "+=100%",
           pin: true,
-          pinSpacing: false, 
+          pinSpacing: false,
         },
       });
     });
@@ -158,6 +160,10 @@ https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg"
             <span> PIERRE-LUC</span>
           </div>
         </div>
+      </div>
+      <div className="section4">
+
+        <AgentHeroHoverPage></AgentHeroHoverPage>
       </div>
     </div>
   );

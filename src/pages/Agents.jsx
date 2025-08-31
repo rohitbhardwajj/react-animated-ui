@@ -1,7 +1,6 @@
 import React from "react";
 import Nav from "../components/home/Nav";
 import AgentHeroText from "../components/agence/Agent-hero-text";
-
 const Agents = () => {
   return (
     <div className="agents-page">
@@ -9,6 +8,7 @@ const Agents = () => {
       <div>
         <AgentHeroText></AgentHeroText>
       </div>
+      
     </div>
   );
 };

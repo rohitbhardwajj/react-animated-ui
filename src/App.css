@@ -240,6 +240,62 @@ font-size: clamp(16px, 6vw, 10vw);
   background-color: white;
 }
 
+.section4{
+  width: 100%;
+  background-color: black;
+  z-index: 999999;
+  position: relative;
+}
+.AgentHeroHoverPage{
+  width: 100%;
+  height: 12%;
+  border-bottom: 2px solid white;
+  /* border-top: 2px solid white; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  cursor: pointer;
+  position: relative; /* important for absolute image */
+}
+
+.AgentHeroHoverPage:hover{
+  background-color: rgba(128, 128, 128, 0.324);
+  transition: all 0.3s ease-in-out;
+  scale: 0.99;
+}
+
+.AgentHeroHoverPage h1{
+  font-family: "font1";
+  font-size: clamp(16px, 3vw, 10vw);
+  font-weight: 500;
+  color: white;
+}
+
+.AgentHeroHoverPage h5{
+  font-family: "font1";
+  font-size: clamp(14px, 2vw, 8vw);
+  font-weight: 400;
+  color: white;
+}
+
+.AgentHeroHoverPage img{
+  height: 200px;
+  border-radius: 10px;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 999999999;
+}
+
+.AgentHeroHoverPage:hover img{
+  opacity: 1;
+}
+
+
 @media (max-width: 768px) {
   .home-top-text{
   margin-top: 150px;  /* screen ki height ke hisaab se margin-top badhega */
