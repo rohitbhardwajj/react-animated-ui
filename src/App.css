@@ -235,7 +235,7 @@ font-size: clamp(16px, 6vw, 10vw);
   overflow: hidden;
 }
 .stairs{
-  width: 25%;
+  width: 20%;
   height: 100%;
   background-color: white;
 }
