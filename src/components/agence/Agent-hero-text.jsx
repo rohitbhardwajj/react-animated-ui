@@ -7,11 +7,12 @@ import AgentPage2 from "./Agent-page2";
 const AgentHeroText = () => {
   const section3ref = useRef(null);
   const imageRefsection3 = useRef(null);
+  const scroll = useRef(null);
   let imageUrls = [
     "https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg",
     "https://k72.ca/uploads/teamMembers/Olivier_480x640-480x640.jpg",
     "https://k72.ca/uploads/teamMembers/Lawrence_480x640-480x640.jpg",
-   
+
     "https://k72.ca/uploads/teamMembers/MyleneS_480x640-480x640.jpg",
     "https://k72.ca/uploads/teamMembers/SophieA_480x640-480x640.jpg",
     "https://k72.ca/uploads/teamMembers/Claire_480x640-480x640.jpg",
@@ -20,93 +21,103 @@ const AgentHeroText = () => {
     "https://k72.ca/uploads/teamMembers/CAMILLE_480X640_2-480x640.jpg",
     "https://k72.ca/uploads/teamMembers/MEGGIE_480X640_2-480x640.jpg",
     "https://k72.ca/uploads/teamMembers/joel_480X640_3-480x640.jpg",
-     "https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg",
-     "https://k72.ca/uploads/teamMembers/MAXIME_480X640_2-480x640.jpg",
-      "https://k72.ca/uploads/teamMembers/HugoJoseph_480x640-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/MAXIME_480X640_2-480x640.jpg",
+    "https://k72.ca/uploads/teamMembers/HugoJoseph_480x640-480x640.jpg",
     "https://k72.ca/uploads/teamMembers/ChantalG_480x640-480x640.jpg",
   ];
 
-  let content =[
+  let content = [
     "Expertise",
     "Strategy Advertising Branding Design Content",
     " ",
     "Our Work_ Born in curiosity, raised by dedication and fed with a steady diet of creativity",
     "Our Creative_ Simmering in an environment where talent can come to a full boil. Encouraged to become the best versions of ourselves",
-    "Our Culture_ We’re open to each other. Period. The team works together to create a space that makes us proud"
-  ]
+    "Our Culture_ We’re open to each other. Period. The team works together to create a space that makes us proud",
+  ];
   const imageDiv = useRef(null);
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
     gsap.to(imageDiv.current, {
       scrollTrigger: {
         trigger: imageDiv.current,
-        start: "top 15%", 
-        end: "top -160%", 
-        pin:true,
+        start: "top 15%",
+        end: "top -160%",
+        pin: true,
 
         onUpdate: (elem) => {
-            if(Math.floor(elem.progress * imageUrls.length)<14){
-                imageDiv.current.children[0].src =
-            imageUrls[Math.floor(elem.progress * imageUrls.length)];
-            }else{
-                imageDiv.current.children[0].src =
-            imageUrls[13];
-            }
-          
-            console.log(Math.floor(elem.progress * imageUrls.length));
+          if (Math.floor(elem.progress * imageUrls.length) < 14) {
+            imageDiv.current.children[0].src =
+              imageUrls[Math.floor(elem.progress * imageUrls.length)];
+          } else {
+            imageDiv.current.children[0].src = imageUrls[13];
+          }
+
+          console.log(Math.floor(elem.progress * imageUrls.length));
         },
       },
     });
   });
 
-useGSAP(() => {
-  gsap.to(section3ref.current, {
-    scrollTrigger: {
-      trigger: section3ref.current,
-      start: "top 5%",
-      end: "top -160%",
-
-      onEnter: () => {
-        gsap.to(section3ref.current, { 
-          backgroundColor: "black", 
-          duration: 0.5  // 1 second smooth animation
-        });
-      },
-
-      onLeaveBack: () => {
-        gsap.to(section3ref.current, { 
-          backgroundColor: "white", 
-          duration: 0.5   // smooth revert
-        });
-      }
-    }
-  });
-});
-
-useGSAP(() => {
-  let images = gsap.utils.toArray(".section3 img");
-
-  images.forEach((img, i) => {
-    gsap.to(img, {
+  useGSAP(() => {
+    gsap.to(section3ref.current, {
       scrollTrigger: {
-        trigger: img,
-        start: "top top",
-        end: "+=100%",
-        pin: true,
-        pinSpacing: false,   // next image directly uspe chipak jaaye
-        markers: true
-      }
+        trigger: section3ref.current,
+        start: "top 5%",
+        end: "top -160%",
+
+        onEnter: () => {
+          gsap.to(section3ref.current, {
+            backgroundColor: "black",
+            duration: 0.5, // 1 second smooth animation
+          });
+        },
+
+        onLeaveBack: () => {
+          gsap.to(section3ref.current, {
+            backgroundColor: "white",
+            duration: 0.5, // smooth revert
+          });
+        },
+      },
     });
   });
+
+  useGSAP(() => {
+    let images = gsap.utils.toArray(".section3 img");
+
+    images.forEach((img, i) => {
+      gsap.to(img, {
+        scrollTrigger: {
+          trigger: img,
+          start: "top top",
+          end: "+=100%",
+          pin: true,
+          pinSpacing: false, 
+        },
+      });
+    });
+  });
+
+useGSAP(() => {
+  let temp = gsap.utils.toArray(".scrollcontainer span");
+
+  gsap.to(temp, {
+    scrollTrigger: {
+      trigger: scroll.current,      
+      start: "top 20%",            
+      endTrigger: ".section3",      
+      end: "bottom bottom",         
+      pin: true,                                   
+    },
+  });
 });
-
-
 
 
 
   return (
     <div>
-      <div  className="section1">
+      <div className="section1">
         <div ref={imageDiv} className="agent-fix-img-page">
           <img
             src="
@@ -130,18 +141,24 @@ https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg"
           </p>
         </div>
       </div>
-        <div className="section2">
-          {content.map((item ,idx)=>{
-            return <AgentPage2 key={idx} content={item}></AgentPage2>
-          })}
+      <div className="section2">
+        {content.map((item, idx) => {
+          return <AgentPage2 key={idx} content={item}></AgentPage2>;
+        })}
+      </div>
+      <div ref={section3ref} className="section3">
+        {imageUrls.map((elem, idx) => {
+          return <img key={idx} ref={imageRefsection3} src={elem} alt="" />;
+        })}
+        <div ref={scroll} class="alwayscroll">
+          <div  class="scrollcontainer">
+            <span> PIERRE-LUC</span>
+            <span> PIERRE-LUC</span>
+            <span> PIERRE-LUC</span>
+            <span> PIERRE-LUC</span>
+          </div>
         </div>
-        <div ref={section3ref} className="section3">
-          {imageUrls.map((elem ,idx)=>{
-            return  <img key={idx} ref={imageRefsection3} src={elem} alt="" />
-          })}
-           
-           
-        </div>
+      </div>
     </div>
   );
 };
