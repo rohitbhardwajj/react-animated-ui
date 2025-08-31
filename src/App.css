@@ -99,6 +99,7 @@ font-size: clamp(16px, 6vw, 10vw);
   border-radius: 8px; 
   cursor: pointer;
   
+  
 }
 .nav-bar .menu:hover{
   background-color: rgb(145, 145, 23)
@@ -113,14 +114,25 @@ font-size: clamp(16px, 6vw, 10vw);
 }
 .agent-hero-para{
   /* background-color: red; */
-  width: 50vw;
-  transform: translateX(95% );
+  width: 60vw;
+  /* background-color: red; */
+  transform: translateX(60% );
+  
  
 }
-
+.agent-page2-div{
+  /* background-color: blue; */
+  padding: 80px 20px;
+  width: 25%;
+  color: black;
+  font-weight: 800;
+  font-size: 2vw;
+  min-height: 250px;
+}
 .agent-hero-para p{
   font-size: 4vw;
   font-family: "font2";
+  margin-top: 100px;
 }
 .agent-hero-text{
   font-size: 20vw;
@@ -151,11 +163,35 @@ font-size: clamp(16px, 6vw, 10vw);
 }
 .section1{
   position: relative;
+  /* background-color: red; */
+  padding-bottom: 80px;
 }
 
 .section2{
-  height: 5000px;
-  background-color: black;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 70px;
+  text-shadow: 10px 10px 10px black;
+
+}
+
+.section3{
+  height: 2300vh;
+  background-color: white;
+  padding-top: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.section3 img{
+  border-radius: 30px;
 }
 
 

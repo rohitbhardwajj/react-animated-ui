@@ -2,8 +2,11 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import AgentPage2 from "./Agent-page2";
 
 const AgentHeroText = () => {
+  const section3ref = useRef(null);
+  const imageRefsection3 = useRef(null);
   let imageUrls = [
     "https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg",
     "https://k72.ca/uploads/teamMembers/Olivier_480x640-480x640.jpg",
@@ -22,13 +25,21 @@ const AgentHeroText = () => {
       "https://k72.ca/uploads/teamMembers/HugoJoseph_480x640-480x640.jpg",
     "https://k72.ca/uploads/teamMembers/ChantalG_480x640-480x640.jpg",
   ];
+
+  let content =[
+    "Expertise",
+    "Strategy Advertising Branding Design Content",
+    " ",
+    "Our Work_ Born in curiosity, raised by dedication and fed with a steady diet of creativity",
+    "Our Creative_ Simmering in an environment where talent can come to a full boil. Encouraged to become the best versions of ourselves",
+    "Our Culture_ We’re open to each other. Period. The team works together to create a space that makes us proud"
+  ]
   const imageDiv = useRef(null);
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
     gsap.to(imageDiv.current, {
       scrollTrigger: {
         trigger: imageDiv.current,
-        markers: true,
         start: "top 15%", 
         end: "top -160%", 
         pin:true,
@@ -47,6 +58,52 @@ const AgentHeroText = () => {
       },
     });
   });
+
+useGSAP(() => {
+  gsap.to(section3ref.current, {
+    scrollTrigger: {
+      trigger: section3ref.current,
+      start: "top 5%",
+      end: "top -160%",
+
+      onEnter: () => {
+        gsap.to(section3ref.current, { 
+          backgroundColor: "black", 
+          duration: 0.5  // 1 second smooth animation
+        });
+      },
+
+      onLeaveBack: () => {
+        gsap.to(section3ref.current, { 
+          backgroundColor: "white", 
+          duration: 0.5   // smooth revert
+        });
+      }
+    }
+  });
+});
+
+useGSAP(() => {
+  let images = gsap.utils.toArray(".section3 img");
+
+  images.forEach((img, i) => {
+    gsap.to(img, {
+      scrollTrigger: {
+        trigger: img,
+        start: "top top",
+        end: "+=100%",
+        pin: true,
+        pinSpacing: false,   // next image directly uspe chipak jaaye
+        markers: true
+      }
+    });
+  });
+});
+
+
+
+
+
   return (
     <div>
       <div  className="section1">
@@ -73,7 +130,18 @@ https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg"
           </p>
         </div>
       </div>
-      <div className="section2"></div>
+        <div className="section2">
+          {content.map((item ,idx)=>{
+            return <AgentPage2 key={idx} content={item}></AgentPage2>
+          })}
+        </div>
+        <div ref={section3ref} className="section3">
+          {imageUrls.map((elem ,idx)=>{
+            return  <img key={idx} ref={imageRefsection3} src={elem} alt="" />
+          })}
+           
+           
+        </div>
     </div>
   );
 };
