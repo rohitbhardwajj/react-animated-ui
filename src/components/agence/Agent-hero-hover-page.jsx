@@ -31,7 +31,7 @@ const AgentHeroHoverPage = () => {
                 <div key={index} className='AgentHeroHoverPage'>
                     <h5>{elem.role}</h5>
                     <h1>{elem.name}</h1>
-                    <img src={elem.image} alt={elem.name} />
+                    <img className='imgtemp' src={elem.image} alt={elem.name} />
                 </div>
             ))}
         </div>
