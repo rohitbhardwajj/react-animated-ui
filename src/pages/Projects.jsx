@@ -7,7 +7,7 @@ const Projects = () => {
       <div>
         <ProjectHeader />
       </div>
-      
+        
        
     </div>
   )

@@ -367,29 +367,60 @@ font-size: clamp(16px, 6vw, 10vw);
 .project-header{
   width: 100%;
   height: 100vh;
-  background-color: rgb(191, 13, 13);
+  background-color: white;
 }
 .project-header-text{
   font-size: 7vw;
   font-family: "font1";
   padding-top: 250px;
+   color: black;
 }
+
 .project-image{
   width: 100%;
-  height: 110vh;
-  background-color: pink;
+  background-color: white;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   flex-shrink: 0;
   gap: 10px;
+  padding-bottom: 100px;
+}
+.kk{
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+   overflow: hidden;
 }
 .img1{
-  background-color: purple;
   width: 45%;
 
-  height: 50%;
+overflow: hidden;
+  height: 100%;
 }
+.img1 img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  cursor: pointer;
+  overflow: hidden;
+  
+}
+.img1:hover img{
+  transition: all 0.1s ease-in-out;
+  border-radius: 30px;
+  scale: 1.05;
+  transform: scale(1.05);
+}
+.img1:hover{
+  border-radius: 30px;
+}
+
 
 @media (max-width: 768px) {
   .home-top-text{
