@@ -376,6 +376,9 @@ font-size: clamp(16px, 6vw, 10vw);
    color: black;
 }
 
+.ml{
+  background-color: black ;
+}
 .project-image{
   width: 100%;
   background-color: white;
@@ -384,7 +387,6 @@ font-size: clamp(16px, 6vw, 10vw);
   justify-content: center;
   flex-shrink: 0;
   gap: 10px;
-  padding-bottom: 100px;
 }
 .kk{
   width: 100%;

@@ -17,7 +17,6 @@ const ProjectImage = () => {
           height: "400px",
           scrollTrigger: {
             trigger: el,    
-            markers:true,
             start: "top 60%", // jab element viewport me aaye
             end: "+=100%",   // kab tak chale
             scrub: true,      // scroll ke sath smooth animation
@@ -62,7 +61,20 @@ const ProjectImage = () => {
              </div>
         </div>
      
-      
+         <div className="agtlst1 ml  lastone">
+        <div className="l1">
+          <div className="lilft">
+            <h1>FB</h1>
+            <h1>FB</h1>
+            <h1>FB</h1>
+            <h1>FB</h1>
+          </div>
+          <div className="lirht">
+            <h1>Contact</h1>
+          </div>
+        </div>
+        <div className="l2"></div>
+      </div>
     </div>
   );
 };

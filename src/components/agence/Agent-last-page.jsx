@@ -43,18 +43,18 @@ const AgentLastPage = () => {
         />
       </div>
       <div className="agtlst1  lastone">
-       <div className="l1">
-        <div className="lilft">
+        <div className="l1">
+          <div className="lilft">
             <h1>FB</h1>
             <h1>FB</h1>
             <h1>FB</h1>
             <h1>FB</h1>
-        </div>
-        <div className="lirht">
+          </div>
+          <div className="lirht">
             <h1>Contact</h1>
+          </div>
         </div>
-       </div>
-       <div className="l2"></div>
+        <div className="l2"></div>
       </div>
     </div>
   );
