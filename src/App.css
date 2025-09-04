@@ -365,9 +365,31 @@ font-size: clamp(16px, 6vw, 10vw);
 }
 
 .project-header{
-  
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(191, 13, 13);
 }
+.project-header-text{
+  font-size: 7vw;
+  font-family: "font1";
+  padding-top: 250px;
+}
+.project-image{
+  width: 100%;
+  height: 110vh;
+  background-color: pink;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 10px;
+}
+.img1{
+  background-color: purple;
+  width: 45%;
 
+  height: 50%;
+}
 
 @media (max-width: 768px) {
   .home-top-text{
