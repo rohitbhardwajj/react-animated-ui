@@ -11,16 +11,16 @@ const App = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const changeurl = useLocation();
 
-  useGSAP(
-    () => {
-      gsap.fromTo(
-        ".mainn",
-        { opacity: 0 },
-        { opacity: 1, duration: 0.5, delay: 2 }
-      );
-    },
-    [changeurl.pathname]
-  );
+  // useGSAP(
+  //   () => {
+  //     gsap.fromTo(
+  //       ".mainn",
+  //       { opacity: 0 },
+  //       { opacity: 1, duration: 0.5, delay: 2 }
+  //     );
+  //   },
+  //   [changeurl.pathname]
+  // );
 
   return (
     <div>
