@@ -62,7 +62,7 @@ const ProjectImage = () => {
         </div>
      
          <div className="agtlst1 ml  lastone">
-        <div className="l1">
+           <div className="l1">
           <div className="lilft">
             <h1>FB</h1>
             <h1>FB</h1>

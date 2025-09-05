@@ -4,8 +4,11 @@ import { Link } from 'react-router-dom'
 const HomeBottomText = () => {
   return (
     <div className='home-bottom-text'>
-      <Link to="/projects">Projects</Link>
+      <div className="s">
+        <Link to="/projects">Projects</Link>
       <Link to="/agents">Agency</Link>
+      </div>
+      
     </div>
   )
 }

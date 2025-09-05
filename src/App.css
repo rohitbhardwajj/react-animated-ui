@@ -6,87 +6,81 @@
 
 .home-page{
   min-height: 100vh;
-  background-color: rgba(120, 16, 16, 0.929);
-  width: 100vw;
- color: white;
- position: fixed;
- top: 0%;
-
-}
-
-
-.home-page-video-container{
-  overflow: hidden;
-  height: 100vh;
+  width: 100%;
+  color: white;
+  position: fixed;
+  top: 0%;
 }
 
 .home-page-video{
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   object-fit: cover;
 }
+
 .home-page-content{
-  height: 115vh;
   position: relative;
   display: flex;
+  height: 100vh;
   flex-direction: column;
   justify-content: space-between;
 }
 
+.m{ }
 
 .home-top-text {
   font-family: "font1";
- font-size: clamp(16px, 9vw, 10vw);
+  font-size: clamp(16px, 9vw, 10vw);
   font-weight: 500;
   text-align: center;
   margin-bottom: 20px;
   color: white;
   text-transform: uppercase;
-  margin-top: 10px;
-  
+  margin-top: 80px;
 }
 
 .home-bottom-text {
   font-family: "font1";
-font-size: clamp(16px, 6vw, 10vw);
   font-weight: 300;
-  text-align: center;
+  width: 100%;
   margin-bottom: 20px;
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  justify-content: space-evenly;
 }
+
+.s{ gap: 10px; }
 
 .home-bottom-text a{
   border-radius: 50px;
   border: 3px solid white;
   text-decoration: none;
+  padding: 20px 30px;
+  font-size: 4vw;
   color: white;
-  padding: 10px 35px;
 }
 .home-bottom-text a:hover{
   background-color: rgb(145, 145, 23);
   color: white;
   transition: all 0.3s ease-in-out;
 }
+
 .nav-bar {
-  height: 60px;             /* thoda height badha lo */
+  height: 60px;
   position: absolute;
   z-index: 99;
   width: 100%;
   display: flex;
-  align-items: center;      /* vertical center */
-  justify-content: space-between; /* h1 left, menu right */
-  padding: 0 20px;          /* andar ka gap */
-  background-color: transparent; /* optional */
+  align-items: center;
+  justify-content: space-between; 
+  padding: 0 20px;
 }
 
 .nav-bar h1 {
   font-weight: bold;
   color: white;
   font-family: "font4";
-  font-size: clamp(18px, 3vw, 28px); /* responsive font-size */
-  margin: 0; /* default margin hata do */
+  font-size: clamp(18px, 3vw, 28px);
+  margin: 0;
 }
 
 .nav-bar .menu {
@@ -97,30 +91,24 @@ font-size: clamp(16px, 6vw, 10vw);
   padding: 10px;  
   border-radius: 8px; 
   cursor: pointer;
-  
-  
 }
 .nav-bar .menu:hover{
   background-color: rgb(145, 145, 23)
 }
-.agents-page .nav-bar h1 {
-  color: black;
-}
+
+.agents-page{ overflow: hidden; }
+.agents-page .nav-bar h1 { color: black; }
 .agents-page .nav-bar{
   position: sticky;
   top: 0%;
   z-index: 9999;
 }
+
 .agent-hero-para{
-  /* background-color: red; */
   width: 60vw;
-  /* background-color: red; */
-  transform: translateX(60% );
-  
- 
+  transform: translateX(60%);
 }
 .agent-page2-div{
-  /* background-color: blue; */
   padding: 80px 20px;
   width: 25%;
   color: black;
@@ -146,26 +134,24 @@ font-size: clamp(16px, 6vw, 10vw);
   align-items: center;
   margin-top: 10vh;
   padding-top: 260px;
-
 }
 
 .agent-fix-img-page {
-  width: 20vw;  /* sticky use karo */         /* kitna gap se sticky ho, wahi rehga */
+  width: 20vw;
   position: absolute;
   left: 30%;
   top: 5%;
 }
-
 .agent-fix-img-page img {
   height: 20vw;
   border-radius: 20px;
 }
+
 .section1{
   position: relative;
   background-color: white;
   padding-bottom: 80px;
 }
-
 .section2{
   background-color: white;
   display: flex;
@@ -176,11 +162,8 @@ font-size: clamp(16px, 6vw, 10vw);
   justify-content: center;
   margin-top: 70px;
   text-shadow: 10px 10px 10px black;
-
 }
-
 .section3{
-  /* height: 2300vh; */
   background-color: white;
   padding-top: 400px;
   display: flex;
@@ -190,13 +173,9 @@ font-size: clamp(16px, 6vw, 10vw);
   gap: 20px;
   padding-bottom: 100px;
 }
-.section3 img{
-  border-radius: 30px;
-  z-index: 9999;
-}
+.section3 img{ border-radius: 30px; z-index: 9999; }
 
 .alwayscroll {
-  /* background-color: red; */
   height: 90px;
   position: absolute;
   display: flex;
@@ -204,13 +183,11 @@ font-size: clamp(16px, 6vw, 10vw);
   width: 100%;
   overflow: hidden;
 }
-
 .scrollcontainer {
   display: flex;
   animation: scroll 10s linear infinite;
   position: absolute;
 }
-
 .scrollcontainer span {
   font-size: 80px;
   font-weight: 800;
@@ -219,7 +196,6 @@ font-size: clamp(16px, 6vw, 10vw);
   padding: 0 40px;
   white-space: nowrap;
 }
-
 @keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -250,23 +226,22 @@ font-size: clamp(16px, 6vw, 10vw);
   width: 100%;
   height: 12%;
   border-bottom: 2px solid white;
-  /* border-top: 2px solid white; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 10px;
   cursor: pointer;
-  position: relative; /* important for absolute image */
+  position: relative;
 }
-
 .AgentHeroHoverPage:hover{
   background-color: #D3FD50;
   transition: all 0.3s ease-in-out;
   scale: 1;
-  h1, h5{
-    color: black;
-    transition: all 0.3s ease-in-out;
-  }
+}
+.AgentHeroHoverPage:hover h1,
+.AgentHeroHoverPage:hover h5{
+  color: black;
+  transition: all 0.3s ease-in-out;
 }
 
 .AgentHeroHoverPage h1{
@@ -275,14 +250,12 @@ font-size: clamp(16px, 6vw, 10vw);
   font-weight: 500;
   color: white;
 }
-
 .AgentHeroHoverPage h5{
   font-family: "font1";
   font-size: clamp(14px, 2vw, 8vw);
   font-weight: 400;
   color: white;
 }
-
 .AgentHeroHoverPage img{
   height: 300px;
   border-radius: 10px;
@@ -292,25 +265,18 @@ font-size: clamp(16px, 6vw, 10vw);
   transform: translateY(-80%);
   display: none;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  z-index: 999999999;
   transition: all 0.6s ease-in-out;
+  z-index: 999999999;
 }
-
 .AgentHeroHoverPage:hover img{
   display: block;
   opacity: 1;
 }
 
-
-.agent-last-page{
-  width: 100%;
-  background-color: black;
-}
+.agent-last-page{ width: 100%; background-color: black; }
 .agtlst1{
   width: 100%;
   height: 80vh;
-  /* background-color: blue; */
 }
 .agtlst1 img{
   border-radius: 60px;
@@ -325,20 +291,18 @@ font-size: clamp(16px, 6vw, 10vw);
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-
 }
 .l1{
   width: 100%;
   height: 30%;
   display: flex;
-  justify-content: space-between  ;
+  justify-content: space-between;
 }
 .lilft{
    width: 50%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
 }
 .lilft h1 ,.lirht h1{
   font-family: "font1";
@@ -361,7 +325,6 @@ font-size: clamp(16px, 6vw, 10vw);
 .l2{
   width: 100%;
   height: 30%;
-  /* background-color: purple; */
 }
 
 .project-header{
@@ -373,12 +336,9 @@ font-size: clamp(16px, 6vw, 10vw);
   font-size: 7vw;
   font-family: "font1";
   padding-top: 250px;
-   color: black;
+  color: black;
 }
-
-.ml{
-  background-color: black ;
-}
+.ml{ background-color: black ; }
 .project-image{
   width: 100%;
   background-color: white;
@@ -396,12 +356,11 @@ font-size: clamp(16px, 6vw, 10vw);
   align-items: center;
   gap: 10px;
   background-color: white;
-   overflow: hidden;
+  overflow: hidden;
 }
 .img1{
   width: 45%;
-
-overflow: hidden;
+  overflow: hidden;
   height: 100%;
 }
 .img1 img{
@@ -411,25 +370,83 @@ overflow: hidden;
   object-position: top;
   cursor: pointer;
   overflow: hidden;
-  
 }
 .img1:hover img{
   transition: all 0.1s ease-in-out;
   border-radius: 30px;
-  scale: 1.05;
   transform: scale(1.05);
 }
-.img1:hover{
-  border-radius: 30px;
-}
+.img1:hover{ border-radius: 30px; }
 
+/* ---------- RESPONSIVE PART ---------- */
+
+@media (max-width: 1024px) {
+  .agent-hero-para {
+    width: 80vw;
+    transform: translateX(0);
+    text-align: center;
+    margin: 0 auto;
+  }
+  .agent-hero-para p {
+    font-size: 6vw;
+    margin-top: 50px;
+  }
+  .agent-hero-text {
+    font-size: 15vw;
+    padding-top: 120px;
+  }
+  .agent-fix-img-page {
+    width: 40vw;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .agent-fix-img-page img {
+    height: auto;
+    width: 100%;
+  }
+}
 
 @media (max-width: 768px) {
   .home-top-text{
-  margin-top: 150px;  /* screen ki height ke hisaab se margin-top badhega */
+    font-size: 8vw;
+    margin-top: 100px;
+    padding: 0 10px;
+  }
+  .home-bottom-text{
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  .home-bottom-text a{
+    font-size: 6vw;
+    padding: 15px 20px;
+  }
+  .kk{
+    flex-direction: column;
+    height: auto;
+  }
+  .img1{
+    width: 100%;
+    height: auto;
+  }
+  .img1 img{
+    height: auto;
+  }
+  .lastone{
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .l1{
+    flex-direction: column;
+    align-items: center;
+  }
+  .lilft, .lirht{
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0;
+  }
 }
-}
-
-  
-
-
